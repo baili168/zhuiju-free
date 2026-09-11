@@ -859,6 +859,21 @@
       },
       "result": "pending_review",
       "notes": "根据用户补充将 影视大全 链接从 https://yingshidaquan.top/ 更新为 https://www.kanys8.com/；后续由 GitHub Actions 自动检测可用性，并持续观察版权状态与站点安全性。"
+    },
+    {
+      "id": "verify-20260911-picktv-removed",
+      "resource_ids": [
+        "yangke-peekpro-picktv"
+      ],
+      "checked_at": "2026-09-11",
+      "checked_by": "maintainer",
+      "method": "manual",
+      "environment": {
+        "region": "unspecified",
+        "network": "GitHub public repository"
+      },
+      "result": "removed",
+      "notes": "GitHub 仓库 ingriddaleusag-dotcom/PickTV（羊壳 PeekPro 开源版）于 2026-09-05 后删除或转为私有，API 返回 404；按规则保留历史记录并从精选下架，star 数与仓库更新时间保留最后同步值。"
     }
   ]
 }

@@ -71,6 +71,13 @@ for (const resource of resourcesData.resources) {
     continue;
   }
 
+  if (
+    resource.verification?.status === "removed" ||
+    resource.verification?.status === "temporarily_unavailable"
+  ) {
+    continue;
+  }
+
   const fullName = resource.github?.full_name;
   if (!fullName) {
     throw new Error(`${resource.id}: open source resource must have github.full_name`);

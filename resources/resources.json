@@ -4254,17 +4254,16 @@
         "payment": "low"
       },
       "verification": {
-        "status": "recommended",
-        "last_checked": "2026-08-01",
+        "status": "removed",
+        "last_checked": "2026-09-11",
         "method": "manual",
-        "notes": "根据 GitHub 公开仓库信息收录；star 数与仓库更新时间来自 GitHub API。"
+        "notes": "GitHub 仓库 ingriddaleusag-dotcom/PickTV 于 2026-09-05 后删除或转为私有，API 返回 404，故从精选下架并保留历史记录；若作者在其他地址重新发布可恢复收录。"
       },
       "source": {
         "submitted_by": "maintainer",
         "added_at": "2026-08-01"
       },
-      "featured": true,
-      "featured_order": 13,
+      "featured": false,
       "github": {
         "full_name": "ingriddaleusag-dotcom/PickTV",
         "stars": 1069,
