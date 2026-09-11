@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://zhuiju.me/schemas/resources.schema.json",
+  "$id": "https://raw.githubusercontent.com/baili168/zhuiju-free/main/resources/schema.json",
   "title": "Awesome Zhuiju Free resources",
   "type": "object",
   "required": ["version", "updated_at", "resources"],

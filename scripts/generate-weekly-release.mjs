@@ -326,10 +326,10 @@ ${bulletList(commits, "本周没有额外维护提交。", (subject) => `- ${sub
 
 ## 相关链接
 
-- [浏览完整资源列表](https://github.com/laoma2053/awesome-zhuiju-free#精选资源)
-- [查看资源数据库](https://github.com/laoma2053/awesome-zhuiju-free/blob/main/resources/resources.json)
-- [查看可用性检测结果](https://github.com/laoma2053/awesome-zhuiju-free/blob/main/reports/availability.json)
-- [推荐新资源](https://github.com/laoma2053/awesome-zhuiju-free/issues/new?template=resource.yml)
+- [浏览完整资源列表](https://github.com/baili168/zhuiju-free#精选资源)
+- [查看资源数据库](https://github.com/baili168/zhuiju-free/blob/main/resources/resources.json)
+- [查看可用性检测结果](https://github.com/baili168/zhuiju-free/blob/main/reports/availability.json)
+- [推荐新资源](https://github.com/baili168/zhuiju-free/issues/new?template=resource.yml)
 `;
 }
 

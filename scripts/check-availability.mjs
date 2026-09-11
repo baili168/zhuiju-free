@@ -9,7 +9,7 @@ const concurrency = Number(process.env.CHECK_CONCURRENCY ?? 4);
 const maxAttempts = Number(process.env.CHECK_MAX_ATTEMPTS ?? 2);
 const timeZone = process.env.CHECK_TIME_ZONE ?? "Asia/Shanghai";
 const userAgent =
-  "awesome-zhuiju-free-monitor/1.0 (+https://github.com/laoma2053/awesome-zhuiju-free)";
+  "awesome-zhuiju-free-monitor/1.0 (+https://github.com/baili168/zhuiju-free)";
 
 function statusFromResponse(status) {
   if (status >= 200 && status < 400) {
