@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-06",
+  "updated_at": "2026-09-11",
   "records": [
     {
       "id": "verify-20260606-initial",
@@ -844,6 +844,21 @@
       },
       "result": "pending_review",
       "notes": "根据用户补充将 ZIP0 链接从 https://zip0.com/ 更新为 https://zip0.com/?r=KBDIG8；后续由 GitHub Actions 自动检测可用性，并持续观察版权状态与站点安全性。"
+    },
+    {
+      "id": "verify-20260911-yingshidaquan-url-update",
+      "resource_ids": [
+        "yingshidaquan"
+      ],
+      "checked_at": "2026-09-11",
+      "checked_by": "maintainer",
+      "method": "manual",
+      "environment": {
+        "region": "unspecified",
+        "network": "user submitted"
+      },
+      "result": "pending_review",
+      "notes": "根据用户补充将 影视大全 链接从 https://yingshidaquan.top/ 更新为 https://www.kanys8.com/；后续由 GitHub Actions 自动检测可用性，并持续观察版权状态与站点安全性。"
     }
   ]
 }

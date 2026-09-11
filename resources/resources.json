@@ -1,7 +1,7 @@
 {
   "$schema": "./schema.json",
   "version": 1,
-  "updated_at": "2026-09-07",
+  "updated_at": "2026-09-11",
   "resources": [
     {
       "id": "no-video",
@@ -4636,7 +4636,7 @@
     {
       "id": "yingshidaquan",
       "name": "影视大全",
-      "url": "https://yingshidaquan.top/",
+      "url": "https://www.kanys8.com/",
       "category": "online_video",
       "summary": "在线搜索播放、官解无广。",
       "summary_short": "在线搜索播放、官解无广",
@@ -4667,9 +4667,9 @@
       },
       "verification": {
         "status": "caution",
-        "last_checked": "2026-08-29",
+        "last_checked": "2026-09-11",
         "method": "manual",
-        "notes": "根据用户补充收录在线影视资源：影视大全（https://yingshidaquan.top/，推荐指数 5 星，简介：在线搜索播放、官解无广）；提交状态不作为本项目状态依据，后续由 GitHub Actions 自动检测可用性，并持续观察版权状态与站点安全性。"
+        "notes": "根据用户补充将访问地址从 https://yingshidaquan.top/ 更新为 https://www.kanys8.com/；原站点不可达，新地址待 GitHub Actions 自动检测确认，并持续观察版权状态与站点安全性。"
       },
       "source": {
         "submitted_by": "maintainer",
