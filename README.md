@@ -24,7 +24,7 @@
   <!-- resource-count:start -->
 <a href="resources/resources.json"><img src="https://img.shields.io/badge/已收录-114_个资源-00A98F?style=flat-square" alt="已收录 114 个资源" height="24"></a>
 <!-- resource-count:end -->
-  <a href="https://github.com/baili168/zhuiju-free/actions/workflows/check-availability.yml"><img src="https://img.shields.io/badge/检测时间-2026--09--10-00B4D8?style=flat-square" alt="检测时间 2026-09-10" height="24"></a>
+  <a href="https://github.com/baili168/zhuiju-free/actions/workflows/check-availability.yml"><img src="https://img.shields.io/badge/检测时间-2026--09--11-00B4D8?style=flat-square" alt="检测时间 2026-09-11" height="24"></a>
   <a href="https://github.com/baili168/zhuiju-free/stargazers"><img src="https://img.shields.io/github/stars/baili168/zhuiju-free?style=flat-square&label=Stars&color=F7B801" alt="GitHub Stars" height="24"></a>
   <a href="https://github.com/baili168/zhuiju-free/forks"><img src="https://img.shields.io/github/forks/baili168/zhuiju-free?style=flat-square&label=Forks&color=38BDF8" alt="GitHub Forks" height="24"></a>
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/许可证-CC_BY_4.0-6F42C1?style=flat-square" alt="许可证 CC BY 4.0" height="24"></a>
@@ -107,7 +107,7 @@
 | [IFN](<https://ifn.watch/register?code=8B1EF6>) | 为数不多的真4K，部分免费 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:ifn -->🟢&#8288;可&#8288;访问<!-- /availability:ifn --> | <!-- availability-date:ifn -->2026&#8209;09&#8209;11<!-- /availability-date:ifn --> |
 | [蛋蛋魔法](<https://ddmf.net>) | 国内外热播剧，有福利伦理片（需梯子） | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:ddmf -->🟡&#8288;访问&#8288;受限<!-- /availability:ddmf --> | <!-- availability-date:ddmf -->2026&#8209;09&#8209;11<!-- /availability-date:ddmf --> |
 | [青空次元](<https://www.sorani.net>) | 网友称最夯动漫在线站 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:sorani -->🟢&#8288;可&#8288;访问<!-- /availability:sorani --> | <!-- availability-date:sorani -->2026&#8209;09&#8209;11<!-- /availability-date:sorani --> |
-| [APP影院](<https://www.appmovie.art>) | 国内外热播剧，纯净无广告 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:appmovie -->🟡&#8288;访问&#8288;受限<!-- /availability:appmovie --> | <!-- availability-date:appmovie -->2026&#8209;09&#8209;11<!-- /availability-date:appmovie --> |
+| [APP影院](<https://www.appmovie.art>) | 国内外热播剧，纯净无广告 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:appmovie -->🟢&#8288;可&#8288;访问<!-- /availability:appmovie --> | <!-- availability-date:appmovie -->2026&#8209;09&#8209;11<!-- /availability-date:appmovie --> |
 | [Auete影视](<https://www.aeete.com>) | 蓝光超清精品影视，发布页auete.pro | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:auete-video -->🟢&#8288;可&#8288;访问<!-- /availability:auete-video --> | <!-- availability-date:auete-video -->2026&#8209;09&#8209;11<!-- /availability-date:auete-video --> |
 | [电影人生](<https://dyrs.tv>) | 高清电影在线观看 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:dyrs -->🟢&#8288;可&#8288;访问<!-- /availability:dyrs --> | <!-- availability-date:dyrs -->2026&#8209;09&#8209;11<!-- /availability-date:dyrs --> |
 | [黑夜影院](<https://darkvod.com>) | 综合影视/资源多/无广告 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:darkvod -->🟡&#8288;访问&#8288;受限<!-- /availability:darkvod --> | <!-- availability-date:darkvod -->2026&#8209;09&#8209;11<!-- /availability-date:darkvod --> |
