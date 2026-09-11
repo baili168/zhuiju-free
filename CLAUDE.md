@@ -22,6 +22,9 @@ node scripts/check-availability.mjs
 
 # 更新 open_source 类型资源的 GitHub star 数和最近推送时间
 GITHUB_TOKEN=<token> node scripts/update-open-source-stats.mjs
+
+# 生成静态站点（Command Palette 风格单页）到 site/dist/，由 CI 部署到 GitHub Pages
+node scripts/generate-site.mjs
 ```
 
 CI 使用 Node.js 24；本地需 Node.js 18+（使用了原生 `fetch` 和顶层 `await`）。
@@ -40,6 +43,7 @@ CI 使用 Node.js 24；本地需 Node.js 18+（使用了原生 `fetch` 和顶层
 | `check-availability.mjs` | `resources/resources.json`，`README.md` | `reports/availability.json`，`README.md`（状态标记） |
 | `validate-data.mjs` | 全部 JSON 文件 | 仅 stdout 错误报告 |
 | `update-open-source-stats.mjs` | `resources/resources.json`（GitHub API） | `resources/resources.json` |
+| `generate-site.mjs` | `resources/resources.json`，`reports/availability.json`，`site/template.html` | `site/dist/index.html`（GitHub Pages 站点） |
 
 ### 自动化流程
 

@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>追剧资源导航 · Awesome Zhuiju Free</title>
+<meta name="description" content="免费无广告的追剧资源指南：在线影视、影视APP、网盘搜索、磁力BT、TVBox、直播源，每日自动检测可用性。">
+<style>
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --text:#1b1f2a; --muted:#67707f; --border:#e4e7ee;
+  --accent:#0a66c2; --accent-soft:#e8f1fb; --ring:#0a66c233;
+  --ok:#16a34a; --warn:#d97706; --bad:#dc2626; --none:#9aa1af; --star:#f5b301; --code:#f0f2f6;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#10131a; --card:#171b24; --text:#e7eaf1; --muted:#98a1b3; --border:#262c3a;
+  --accent:#63a4ff; --accent-soft:#16233a; --ring:#63a4ff33; --code:#1d2330; }
+}
+html[data-theme="light"]{ --bg:#f6f7f9; --card:#ffffff; --text:#1b1f2a; --muted:#67707f; --border:#e4e7ee;
+  --accent:#0a66c2; --accent-soft:#e8f1fb; --ring:#0a66c233; --ok:#16a34a; --warn:#d97706; --bad:#dc2626; --none:#9aa1af; --star:#f5b301; --code:#f0f2f6; }
+html[data-theme="dark"]{ --bg:#10131a; --card:#171b24; --text:#e7eaf1; --muted:#98a1b3; --border:#262c3a;
+  --accent:#63a4ff; --accent-soft:#16233a; --ring:#63a4ff33; --code:#1d2330; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:28px 16px 56px}
+header{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header .logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#0a66c2,#38bdf8);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;flex:none;user-select:none}
+header h1{font-size:22px;margin:0;letter-spacing:.5px}
+header .sub{font-size:12px;color:var(--muted);margin-top:1px}
+header .spacer{flex:1}
+.icon-btn{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:9px;padding:7px 12px;font-size:13px;cursor:pointer}
+.icon-btn:hover{border-color:var(--accent)}
+.search{margin-top:18px;position:relative}
+.search input{width:100%;font-size:15px;padding:13px 16px 13px 42px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);outline:none}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--ring)}
+.search .kbd{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:15px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.tabs button{border:1px solid var(--border);background:var(--card);color:var(--muted);border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer;transition:all .12s}
+.tabs button:hover{color:var(--text)}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:14px 2px 4px;font-size:12.5px;color:var(--muted)}
+.legend .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:1px}
+.dot.ok{background:var(--ok)}.dot.warn{background:var(--warn)}.dot.bad{background:var(--bad)}.dot.none{background:var(--none)}
+.list{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;transition:border-color .12s,box-shadow .12s}
+.row.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--ring)}
+.row .ico{width:34px;height:34px;border-radius:8px;flex:none;background:var(--code);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.row .ico img{width:34px;height:34px;object-fit:contain}
+.row .chip{width:34px;height:34px;border-radius:8px;color:#fff;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.row .body{flex:1;min-width:0}
+.row .name{font-size:14.5px;font-weight:600}
+.row .desc{font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
+.row .code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11.5px;color:var(--accent);word-break:break-all;margin-top:2px}
+.row .meta{flex:none;text-align:right;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:3px;align-items:flex-end}
+.stars{color:var(--star);letter-spacing:1px;font-size:12px}
+.gray-star{color:var(--none)}
+.status{white-space:nowrap}
+.copy{flex:none;border:1px solid var(--border);background:var(--card);color:var(--muted);font-size:12px;border-radius:7px;padding:4px 9px;cursor:pointer}
+.copy:hover{color:var(--accent);border-color:var(--accent)}
+.empty{padding:44px 0;text-align:center;color:var(--muted);font-size:14px}
+footer{margin-top:40px;border-top:1px solid var(--border);padding-top:16px;font-size:12.5px;color:var(--muted)}
+footer p{margin:4px 0}
+@media (max-width:520px){
+  .row .desc{white-space:normal}
+  .row .meta{font-size:11px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">追</div>
+    <div>
+      <h1>追剧资源导航</h1>
+      <div class="sub">免费无广告 · 每日自动检测可用性</div>
+    </div>
+    <div class="spacer"></div>
+    <a class="icon-btn" id="gh" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <button class="icon-btn" id="theme" title="切换深浅色">🌙</button>
+  </header>
+
+  <div class="search">
+    <span class="kbd" id="search-icon">🔍</span>
+    <input id="q" type="text" placeholder="搜索资源名称、简介、域名…（按 / 聚焦，↑↓ 选择，Enter 打开）" autocomplete="off" spellcheck="false">
+  </div>
+
+  <nav class="tabs" id="tabs"></nav>
+  <div class="legend" id="legend"></div>
+  <main class="list" id="list"></main>
+
+  <footer id="foot"></footer>
+</div>
+
+<script id="site-data" type="application/json">__SITE_DATA__</script>
+<script>
+(function () {
+  "use strict";
+  var data = JSON.parse(document.getElementById("site-data").textContent);
+  var meta = data.meta, rows = data.rows;
+  var STATUS = {
+    reachable: { label: "可访问", cls: "ok" },
+    restricted: { label: "受限", cls: "warn" },
+    unreachable: { label: "不可达", cls: "bad" },
+    unknown: { label: "未检测", cls: "none" }
+  };
+  var state = { tab: "全部", query: "", sel: 0 };
+  var listEl = document.getElementById("list");
+  var tabsEl = document.getElementById("tabs");
+  var qEl = document.getElementById("q");
+
+  // 主题
+  var mqDark = window.matchMedia("(prefers-color-scheme: dark)");
+  function currentDark() {
+    return localStorage.theme ? localStorage.theme === "dark" : mqDark.matches;
+  }
+  function applyTheme() {
+    var dark = currentDark();
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+    document.getElementById("theme").textContent = dark ? "☀️" : "🌙";
+  }
+  applyTheme();
+  document.getElementById("theme").addEventListener("click", function () {
+    localStorage.theme = currentDark() ? "light" : "dark";
+    applyTheme();
+  });
+
+  // 页头与页脚
+  document.getElementById("gh").href = meta.repoUrl;
+  document.getElementById("foot").innerHTML =
+    "<p>数据来自仓库 <code>resources/resources.json</code> + 每日可用性检测（北京时间约 09:00）" +
+    " · 生成于 " + meta.generatedDate +
+    " · 数据中心共收录 " + meta.totalCount + " 个资源，当前展示精选 " + rows.length + " 个</p>" +
+    "<p>状态检测仅代表 GitHub Actions 节点当时的网络情况，不替代完整体验评价。链接与内容归第三方所有，" +
+    "访问前请自行判断风险。发现失效？<a href=\"" + meta.issueUrl + "\" target=\"_blank\" rel=\"noopener noreferrer\">报告失效</a> · " +
+    "<a href=\"" + meta.repoUrl + "\" target=\"_blank\" rel=\"noopener noreferrer\">查看仓库</a></p>";
+
+  // 分类 Tab（按数据中出现顺序）
+  var catOrder = [];
+  rows.forEach(function (r) {
+    if (catOrder.indexOf(r.categoryId) === -1) catOrder.push(r.categoryId);
+  });
+  var catNames = {};
+  rows.forEach(function (r) { catNames[r.categoryId] = r.categoryName; });
+  var blank = { key: "全部", name: "全部", count: rows.length };
+  var tabs = [blank].concat(catOrder.map(function (k) {
+    return { key: k, name: catNames[k] || k, count: rows.filter(function (r) { return r.categoryId === k; }).length };
+  }));
+
+  // 图例（状态计数）
+  var counts = { reachable: 0, restricted: 0, unreachable: 0, unknown: 0 };
+  rows.forEach(function (r) {
+    if (r.kind === "normal" || r.kind === "config") counts[r.status] = (counts[r.status] || 0) + 1;
+  });
+  document.getElementById("legend").innerHTML =
+    ["reachable", "restricted", "unreachable", "unknown"].map(function (s) {
+      return "<span><span class=\"dot " + STATUS[s].cls + "\"></span>" + STATUS[s].label + " " + counts[s] + "</span>";
+    }).join("");
+
+  // 过滤
+  function matchQuery(r, tokens) {
+    if (!tokens.length) return true;
+    var hay = (r.name + " " + r.summary + " " + r.host + " " + r.categoryName).toLowerCase();
+    return tokens.every(function (t) { return hay.indexOf(t) !== -1; });
+  }
+  function visibleRows() {
+    var tokens = state.query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    return rows.filter(function (r) {
+      return (state.tab === "全部" || r.categoryId === state.tab) && matchQuery(r, tokens);
+    });
+  }
+
+  function letterChip(name) {
+    var hash = 0;
+    for (var i = 0; i < name.length; i++) hash = (hash * 31 + name.charCodeAt(i)) >>> 0;
+    var wrap = document.createElement("span");
+    wrap.className = "chip";
+    wrap.style.background = "hsl(" + (hash % 360) + ",58%,46%)";
+    wrap.textContent = name.charAt(0).toUpperCase();
+    return wrap;
+  }
+  function icon(r) {
+    var box = document.createElement("span");
+    box.className = "ico";
+    var img = document.createElement("img");
+    img.loading = "lazy";
+    img.alt = "";
+    img.src = "https://www.google.com/s2/favicons?sz=64&domain=" + encodeURIComponent(r.host);
+    img.onerror = function () { box.replaceChild(letterChip(r.name), img); };
+    box.appendChild(img);
+    return box;
+  }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+  function statusSpan(r) {
+    var s = STATUS[r.status] || STATUS.unknown;
+    var span = el("span", "status");
+    var dot = el("span", "dot " + s.cls);
+    span.appendChild(dot);
+    span.appendChild(document.createTextNode(s.label + (r.checkedAt ? " · " + r.checkedAt : "")));
+    return span;
+  }
+  function starsSpan(rating) {
+    var span = el("span", "stars");
+    for (var i = 1; i <= 5; i++) {
+      var s = el("span", i > rating ? "gray-star" : null, i <= rating ? "★" : "☆");
+      span.appendChild(s);
+    }
+    return span;
+  }
+
+  function renderRow(r) {
+    var row = el("article", "row");
+    row.appendChild(icon(r));
+
+    var body = el("div", "body");
+    var nameLink = el("a", "name", r.name);
+    nameLink.href = r.href;
+    nameLink.target = "_blank";
+    nameLink.rel = "noopener noreferrer";
+    body.appendChild(nameLink);
+    if (r.kind === "config") {
+      var code = el("div", "code", r.configUrl);
+      body.appendChild(code);
+    } else {
+      body.appendChild(el("div", "desc", r.summary));
+    }
+    row.appendChild(body);
+
+    if (r.kind === "config" && r.configUrl) {
+      var btn = el("button", "copy", "复制");
+      btn.type = "button";
+      btn.addEventListener("click", function (ev) {
+        ev.stopPropagation();
+        var done = function () {
+          btn.textContent = "已复制";
+          setTimeout(function () { btn.textContent = "复制"; }, 1200);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(r.configUrl).then(done, done);
+        } else { done(); }
+      });
+      row.appendChild(btn);
+    }
+
+    var metaBox = el("div", "meta");
+    if (r.kind === "open") {
+      metaBox.appendChild(el("span", "stars", "⭐ " + Number(r.stars).toLocaleString("en-US") + " stars"));
+    } else {
+      metaBox.appendChild(starsSpan(r.rating));
+      metaBox.appendChild(statusSpan(r));
+    }
+    row.appendChild(metaBox);
+    return row;
+  }
+
+  function render() {
+    while (listEl.firstChild) listEl.removeChild(listEl.firstChild);
+    var visible = visibleRows();
+    if (!visible.length) {
+      listEl.appendChild(el("div", "empty", "没有匹配的资源。试试换关键词，或去 GitHub 提交 [资源推荐]。"));
+      return;
+    }
+    visible.forEach(function (r, i) {
+      var row = renderRow(r);
+      if (i === state.sel) row.classList.add("sel");
+      row.dataset.i = String(i);
+      listEl.appendChild(row);
+    });
+  }
+
+  function renderTabs() {
+    while (tabsEl.firstChild) tabsEl.removeChild(tabsEl.firstChild);
+    tabs.forEach(function (t) {
+      var b = el("button", t.key === state.tab ? "on" : null, t.name + " " + t.count);
+      b.type = "button";
+      b.addEventListener("click", function () { state.tab = t.key; state.sel = 0; renderTabs(); render(); });
+      tabsEl.appendChild(b);
+    });
+  }
+
+  function moveSel(delta) {
+    var len = visibleRows().length;
+    if (!len) return;
+    state.sel = (state.sel + delta + len) % len;
+    render();
+    scrollToSel();
+  }
+  function scrollToSel() {
+    var row = listEl.querySelector(".row.sel");
+    if (row && row.scrollIntoView) row.scrollIntoView({ block: "nearest" });
+  }
+
+  qEl.addEventListener("input", function () { state.sel = 0; render(); });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "/" && document.activeElement !== qEl) {
+      ev.preventDefault();
+      qEl.focus();
+    } else if (ev.key === "Escape" && document.activeElement === qEl) {
+      if (qEl.value) { qEl.value = ""; state.query = ""; state.sel = 0; render(); } else { qEl.blur(); }
+    } else if (ev.key === "ArrowDown") {
+      ev.preventDefault();
+      if (document.activeElement === qEl) qEl.blur();
+      moveSel(1);
+    } else if (ev.key === "ArrowUp") {
+      ev.preventDefault();
+      if (document.activeElement === qEl) qEl.blur();
+      moveSel(-1);
+    } else if (ev.key === "Enter") {
+      var row = listEl.querySelector(".row.sel a.name");
+      if (row && document.activeElement !== row) { ev.preventDefault(); row.click(); }
+    }
+  });
+
+  renderTabs();
+  render();
+})();
+</script>
+</body>
+</html>

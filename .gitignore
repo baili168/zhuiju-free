@@ -1,2 +1,5 @@
 # Local Typecho credentials. Never commit this file.
 .typecho.local.json
+
+# Generated static site (built & deployed by CI)
+site/dist/

@@ -553,8 +553,9 @@ updatedReadme = replaceMarkedBlock(
 );
 
 const headerBadgesPattern =
-  /<p align="center">\r?\n  <!-- resource-count:start -->[\s\S]*?<\/p>/;
+  /<p align="center">\r?\n  <a href="https:\/\/baili168\.github\.io\/zhuiju-free\/">[\s\S]*?<\/p>/;
 const headerBadges = `<p align="center">
+  <a href="https://baili168.github.io/zhuiju-free/"><img src="https://img.shields.io/badge/网站-追剧资源导航-0A66C2?style=flat-square" alt="网站 追剧资源导航" height="24"></a>
   ${countBadge}
   <a href="https://github.com/baili168/zhuiju-free/actions/workflows/check-availability.yml"><img src="https://img.shields.io/badge/检测时间-${badgePathDate(availabilityDate)}-00B4D8?style=flat-square" alt="检测时间 ${availabilityDate}" height="24"></a>
   <a href="https://github.com/baili168/zhuiju-free/stargazers"><img src="https://img.shields.io/github/stars/baili168/zhuiju-free?style=flat-square&label=Stars&color=F7B801" alt="GitHub Stars" height="24"></a>

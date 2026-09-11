@@ -1,0 +1,55 @@
+name: Deploy site
+
+on:
+  schedule:
+    # 北京时间约 09:45，紧跟每日资源检测（01:00 UTC）之后
+    - cron: "45 1 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "resources/resources.json"
+      - "reports/availability.json"
+      - "scripts/generate-site.mjs"
+      - "site/template.html"
+      - ".github/workflows/deploy-site.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Generate static site
+        run: node scripts/generate-site.mjs
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

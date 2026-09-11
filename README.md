@@ -21,6 +21,7 @@
 </p>
 
 <p align="center">
+  <a href="https://baili168.github.io/zhuiju-free/"><img src="https://img.shields.io/badge/网站-追剧资源导航-0A66C2?style=flat-square" alt="网站 追剧资源导航" height="24"></a>
   <!-- resource-count:start -->
 <a href="resources/resources.json"><img src="https://img.shields.io/badge/已收录-114_个资源-00A98F?style=flat-square" alt="已收录 114 个资源" height="24"></a>
 <!-- resource-count:end -->
