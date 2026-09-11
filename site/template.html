@@ -46,10 +46,16 @@ header .spacer{flex:1}
 .info-bar #count{margin-left:auto}
 .legend{display:flex;gap:14px;flex-wrap:wrap}
 .legend .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:1px}
+.lkey{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);border-radius:999px;padding:3px 10px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.lkey .dot{margin:0}
+.lkey:hover{color:var(--text);border-color:var(--muted)}
+.lkey.on{border-color:var(--accent);color:var(--text);background:var(--accent-soft)}
 .dot.ok{background:var(--ok)}.dot.warn{background:var(--warn)}.dot.bad{background:var(--bad)}.dot.none{background:var(--none)}
 .list{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
 .row{display:flex;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px 15px;transition:border-color .12s,box-shadow .12s;min-width:0}
 .row.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--ring)}
+.row.row-warn{border-left:3px solid var(--warn)}
+.row.row-bad{border-left:3px solid var(--bad)}
 .row .ico{width:38px;height:38px;border-radius:9px;flex:none;background:var(--code);overflow:hidden;display:flex;align-items:center;justify-content:center}
 .row .ico img{width:100%;height:100%;object-fit:contain}
 .row .chip{width:38px;height:38px;border-radius:9px;color:#fff;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center}
@@ -61,8 +67,12 @@ header .spacer{flex:1}
 .row .desc{font-size:12.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .row .code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11.5px;color:var(--accent);word-break:break-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .line3{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);margin-top:1px}
-.line3 .status{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.line3 .status{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;border-radius:999px;padding:1px 9px 1px 7px}
 .line3 .status .dot{flex:none}
+.status.st-ok{background:rgba(22,163,74,.11);color:var(--ok)}
+.status.st-warn{background:rgba(217,119,6,.13);color:var(--warn)}
+.status.st-bad{background:rgba(220,38,38,.13);color:var(--bad)}
+.status.st-none{background:var(--code);color:var(--muted)}
 .line3 .host{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:150px}
 .line3 .cat{margin-left:auto;border:1px solid var(--border);border-radius:999px;padding:1px 9px;font-size:11.5px;white-space:nowrap;flex:none}
 .copy{align-self:flex-start;flex:none;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:12px;border-radius:7px;padding:3px 9px;cursor:pointer;margin-top:1px}
@@ -118,7 +128,7 @@ footer p{margin:4px 0}
     unreachable: { label: "不可达", cls: "bad" },
     unknown: { label: "未检测", cls: "none" }
   };
-  var state = { tab: "全部", query: "", sel: 0 };
+  var state = { tab: "全部", query: "", statusFilter: null, sel: 0 };
   var listEl = document.getElementById("list");
   var tabsEl = document.getElementById("tabs");
   var qEl = document.getElementById("q");
@@ -163,15 +173,28 @@ footer p{margin:4px 0}
     return { key: k, name: catNames[k] || k, count: rows.filter(function (r) { return r.categoryId === k; }).length };
   }));
 
-  // 图例（状态计数）
+  // 图例：状态计数，可点击按状态过滤
+  var legendEl = document.getElementById("legend");
+  var legendOrder = ["reachable", "restricted", "unreachable", "unknown"];
   var counts = { reachable: 0, restricted: 0, unreachable: 0, unknown: 0 };
-  rows.forEach(function (r) {
-    if (r.kind === "normal" || r.kind === "config") counts[r.status] = (counts[r.status] || 0) + 1;
-  });
-  document.getElementById("legend").innerHTML =
-    ["reachable", "restricted", "unreachable", "unknown"].map(function (s) {
-      return "<span><span class=\"dot " + STATUS[s].cls + "\"></span>" + STATUS[s].label + " " + counts[s] + "</span>";
-    }).join("");
+  rows.forEach(function (r) { counts[r.status] = (counts[r.status] || 0) + 1; });
+  function renderLegend() {
+    while (legendEl.firstChild) legendEl.removeChild(legendEl.firstChild);
+    legendOrder.forEach(function (s) {
+      var b = el("button", "lkey" + (state.statusFilter === s ? " on" : ""));
+      b.type = "button";
+      b.title = "点击筛选该状态的资源";
+      b.appendChild(el("span", "dot " + STATUS[s].cls));
+      b.appendChild(document.createTextNode(STATUS[s].label + " " + counts[s]));
+      b.addEventListener("click", function () {
+        state.statusFilter = state.statusFilter === s ? null : s;
+        state.sel = 0;
+        renderLegend();
+        render();
+      });
+      legendEl.appendChild(b);
+    });
+  }
 
   // 过滤
   function matchQuery(r, tokens) {
@@ -182,7 +205,9 @@ footer p{margin:4px 0}
   function visibleRows() {
     var tokens = state.query.trim().toLowerCase().split(/\s+/).filter(Boolean);
     return rows.filter(function (r) {
-      return (state.tab === "全部" || r.categoryId === state.tab) && matchQuery(r, tokens);
+      return (state.tab === "全部" || r.categoryId === state.tab)
+        && (!state.statusFilter || r.status === state.statusFilter)
+        && matchQuery(r, tokens);
     });
   }
 
@@ -214,7 +239,7 @@ footer p{margin:4px 0}
   }
   function statusSpan(r) {
     var s = STATUS[r.status] || STATUS.unknown;
-    var span = el("span", "status");
+    var span = el("span", "status st-" + s.cls);
     var dot = el("span", "dot " + s.cls);
     span.appendChild(dot);
     span.appendChild(document.createTextNode(s.label + (r.checkedAt ? " · " + r.checkedAt : "")));
@@ -231,6 +256,9 @@ footer p{margin:4px 0}
 
   function renderRow(r) {
     var card = el("article", "row");
+    if (r.kind !== "open" && (r.status === "unreachable" || r.status === "restricted")) {
+      card.classList.add("row-" + (r.status === "unreachable" ? "bad" : "warn"));
+    }
     card.appendChild(icon(r));
 
     var body = el("div", "body");
@@ -399,6 +427,7 @@ footer p{margin:4px 0}
     }
   });
 
+  renderLegend();
   renderTabs();
   render();
 })();
