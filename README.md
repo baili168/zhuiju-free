@@ -89,7 +89,7 @@
 | --- | --- | :---: | :---: | :---: |
 | [ZIP0](<https://zip0.com/?r=KBDIG8>) | 在线影视搜索与播放 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:zip0 -->🟢&#8288;可&#8288;访问<!-- /availability:zip0 --> | <!-- availability-date:zip0 -->2026&#8209;09&#8209;11<!-- /availability-date:zip0 --> |
 | [剧OK](<https://juok3.top/>) | 最新电视剧、最新电影 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:juok -->🟡&#8288;访问&#8288;受限<!-- /availability:juok --> | <!-- availability-date:juok -->2026&#8209;09&#8209;11<!-- /availability-date:juok --> |
-| [蛋蛋奇](<https://www.dandanqi.cc/>) | 最新电视剧/电影/无广告 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:dandanqi -->🔴&#8288;无法&#8288;访问<!-- /availability:dandanqi --> | <!-- availability-date:dandanqi -->2026&#8209;09&#8209;11<!-- /availability-date:dandanqi --> |
+| [蛋蛋赞](<https://dandanzan.org/>) | 最新电视剧/电影/无广告 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:dandanqi -->🟢&#8288;可&#8288;访问<!-- /availability:dandanqi --> | <!-- availability-date:dandanqi -->2026&#8209;09&#8209;11<!-- /availability-date:dandanqi --> |
 | [影视大全](<https://www.kanys8.com/>) | 在线搜索播放、官解无广 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:yingshidaquan -->🟢&#8288;可&#8288;访问<!-- /availability:yingshidaquan --> | <!-- availability-date:yingshidaquan -->2026&#8209;09&#8209;11<!-- /availability-date:yingshidaquan --> |
 | [剧踪影院](<https://www.juzong01.me/>) | 海内外 SVIP 超前更新 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:juzong -->🟢&#8288;可&#8288;访问<!-- /availability:juzong --> | <!-- availability-date:juzong -->2026&#8209;09&#8209;11<!-- /availability-date:juzong --> |
 | [简云影视](<https://jianyunys.com/>) | 纯净无广告/1080P高清秒播 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:jianyunys -->🟢&#8288;可&#8288;访问<!-- /availability:jianyunys --> | <!-- availability-date:jianyunys -->2026&#8209;09&#8209;11<!-- /availability-date:jianyunys --> |
@@ -217,7 +217,7 @@
 | 资源 | 简介 | 推荐指数 | 状态 | 检测时间 |
 | --- | --- | :---: | :---: | :---: |
 | [字幕库](<https://zimuku.org>) | 字幕下载 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:zimuku -->🔴&#8288;无法&#8288;访问<!-- /availability:zimuku --> | <!-- availability-date:zimuku -->2026&#8209;09&#8209;11<!-- /availability-date:zimuku --> |
-| [射手网(伪)](<https://assrt.net>) | 字幕下载 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:assrt -->🟢&#8288;可&#8288;访问<!-- /availability:assrt --> | <!-- availability-date:assrt -->2026&#8209;09&#8209;11<!-- /availability-date:assrt --> |
+| [射手网(伪)](<https://assrt.net>) | 字幕下载 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:assrt -->🔴&#8288;无法&#8288;访问<!-- /availability:assrt --> | <!-- availability-date:assrt -->2026&#8209;09&#8209;11<!-- /availability-date:assrt --> |
 | [SubHD](<https://subhd.tv>) | 分享下载字幕平台 | 🌟&#8288;🌟&#8288;🌟&#8288;🌟&#8288;🌟 | <!-- availability:subhd -->🟡&#8288;访问&#8288;受限<!-- /availability:subhd --> | <!-- availability-date:subhd -->2026&#8209;09&#8209;11<!-- /availability-date:subhd --> |
 
 <p align="right"><a href="#精选资源">返回分类导航</a></p>
