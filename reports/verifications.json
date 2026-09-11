@@ -874,6 +874,21 @@
       },
       "result": "removed",
       "notes": "GitHub 仓库 ingriddaleusag-dotcom/PickTV（羊壳 PeekPro 开源版）于 2026-09-05 后删除或转为私有，API 返回 404；按规则保留历史记录并从精选下架，star 数与仓库更新时间保留最后同步值。"
+    },
+    {
+      "id": "verify-20260911-dandanqi-replaced-by-dandanzan",
+      "resource_ids": [
+        "dandanqi"
+      ],
+      "checked_at": "2026-09-11",
+      "checked_by": "maintainer",
+      "method": "manual",
+      "environment": {
+        "region": "unspecified",
+        "network": "user submitted"
+      },
+      "result": "pending_review",
+      "notes": "根据用户补充将 蛋蛋奇 的链接替换为 蛋蛋赞（https://dandanzan.org/）；原站点 https://www.dandanqi.cc/ 自动检测不可达（HTTP 404）。保留资源 id dandanqi 以维持历史记录，最终状态以 GitHub Actions 自动检测为准。"
     }
   ]
 }
