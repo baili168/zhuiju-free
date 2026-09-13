@@ -1086,6 +1086,17 @@
       "checked_at": "2026-09-13T05:37:07.864Z",
       "attempts": 1,
       "error": null
+    },
+    {
+      "resource_id": "mj2046",
+      "url": "https://mj2046.com/",
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://mj2046.com/",
+      "response_ms": 1381,
+      "checked_at": "2026-09-13T08:20:38.880Z",
+      "attempts": 1,
+      "error": null
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "./schema.json",
   "version": 1,
-  "updated_at": "2026-09-11",
+  "updated_at": "2026-09-13",
   "resources": [
     {
       "id": "no-video",
@@ -5215,6 +5215,51 @@
       "source": {
         "submitted_by": "maintainer",
         "added_at": "2026-08-30"
+      },
+      "featured": true
+    },
+    {
+      "id": "mj2046",
+      "name": "美剧2046",
+      "url": "https://mj2046.com/",
+      "category": "online_video",
+      "summary": "最新美剧、欧美剧在线观看；无广告高清流畅，提供 iOS 和安卓客户端。本站为防失联发布页，最新观看地址以页面公告为准。",
+      "summary_short": "无广告美剧，提供iOS/安卓客户端",
+      "tags": [
+        "在线影视",
+        "美剧",
+        "无广告",
+        "客户端"
+      ],
+      "access": {
+        "requires_login": false,
+        "free_level": "unknown",
+        "regions": [
+          "GLOBAL"
+        ]
+      },
+      "scores": {
+        "more": 5,
+        "speed": 5,
+        "clean": 5,
+        "stable": 5,
+        "ease": 5
+      },
+      "risks": {
+        "copyright": "high",
+        "safety": "medium",
+        "privacy": "unknown",
+        "payment": "unknown"
+      },
+      "verification": {
+        "status": "caution",
+        "last_checked": "2026-09-13",
+        "method": "manual",
+        "notes": "根据用户补充收录在线影视资源：美剧2046（https://mj2046.com/，推荐指数 5 星，简介：专门看美剧，无广告，提供 iOS 和安卓客户端）；本站为防失联发布页，最新观看地址以页面公告为准；提交状态不作为本项目状态依据，后续由 GitHub Actions 自动检测可用性，并持续观察版权状态与站点安全性。"
+      },
+      "source": {
+        "submitted_by": "maintainer",
+        "added_at": "2026-09-13"
       },
       "featured": true
     }
