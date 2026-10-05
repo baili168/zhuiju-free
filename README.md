@@ -25,7 +25,7 @@
   <!-- resource-count:start -->
 <a href="resources/resources.json"><img src="https://img.shields.io/badge/已收录-115_个资源-00A98F?style=flat-square" alt="已收录 115 个资源" height="24"></a>
 <!-- resource-count:end -->
-  <a href="https://github.com/baili168/zhuiju-free/actions/workflows/check-availability.yml"><img src="https://img.shields.io/badge/检测时间-2026--10--04-00B4D8?style=flat-square" alt="检测时间 2026-10-04" height="24"></a>
+  <a href="https://github.com/baili168/zhuiju-free/actions/workflows/check-availability.yml"><img src="https://img.shields.io/badge/检测时间-2026--10--05-00B4D8?style=flat-square" alt="检测时间 2026-10-05" height="24"></a>
   <a href="https://github.com/baili168/zhuiju-free/stargazers"><img src="https://img.shields.io/github/stars/baili168/zhuiju-free?style=flat-square&label=Stars&color=F7B801" alt="GitHub Stars" height="24"></a>
   <a href="https://github.com/baili168/zhuiju-free/forks"><img src="https://img.shields.io/github/forks/baili168/zhuiju-free?style=flat-square&label=Forks&color=38BDF8" alt="GitHub Forks" height="24"></a>
   <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/许可证-CC_BY_4.0-6F42C1?style=flat-square" alt="许可证 CC BY 4.0" height="24"></a>
@@ -279,21 +279,21 @@ _等待首条通过验证的精选资源。你可以 [推荐一个资源](https:
 
 | 资源 | 简介 | star数 | 仓库更新时间 |
 | --- | --- | :---: | :---: |
-| [iptv](<https://github.com/iptv-org/iptv>) | 全球公开 IPTV 频道集合 | 139,715 | 2026-09-28 |
-| [Kazumi](<https://github.com/Predidit/Kazumi>) | 免费无广告的番剧采集与在线观看 | 30,372 | 2026-09-27 |
-| [iptv-api](<https://github.com/Guovin/iptv-api>) | IPTV 直播源自动采集筛选更新平台 | 25,314 | 2026-09-28 |
-| [Animeko](<https://github.com/open-ani/animeko>) | 一站式弹幕追番平台 | 20,321 | 2026-09-28 |
-| [pansou](<https://github.com/fish2018/pansou>) | 高性能网盘资源搜索 API 服务 | 14,724 | 2026-09-27 |
-| [FongMi TV](<https://github.com/FongMi/TV>) | 基于 CatVod 的开源 Android 影音应用 | 9,562 | 2026-09-27 |
-| [CloudSaver](<https://github.com/jiangrui1994/CloudSaver>) | 网盘资源搜索与转存工具 | 9,335 | 2026-04-20 |
-| [zyfun](<https://github.com/Hiram-Wong/zyfun>) | 跨平台桌面端视频资源播放器 | 8,939 | 2026-06-25 |
-| [Bangumi](<https://github.com/czy0729/Bangumi>) | 专门做 ACG 的类豆瓣追番客户端 | 5,983 | 2026-09-27 |
-| [MoonTVPlus](<https://github.com/mtvpls/MoonTVPlus>) | MoonTV 增强版影视聚合播放器 | 3,289 | 2026-09-25 |
-| [quark-auto-save](<https://github.com/Cp0204/quark-auto-save>) | 夸克网盘自动签到转存整理工具 | 3,051 | 2026-07-09 |
-| [SeleneTV](<https://github.com/MoonTechLab/Selene>) | MoonTV v100/Helios 后端客户端 | 2,545 | 2026-05-25 |
-| [WebHomeTV](<https://github.com/fish2018/webhtv>) | 基于 FongMi/CatVod 二开的 Android 影音应用 | 1,566 | 2026-09-24 |
-| [WebHomeTV2](<https://github.com/Silent1566/webhtv>) | 基于 WebHomeTV 二开，支持 TMDB 海报 | 618 | 2026-09-28 |
-| [sky-tv](<https://github.com/sky22333/sky-tv>) | 现代化跨平台视频播放器空壳应用 | 114 | 2026-07-26 |
+| [iptv](<https://github.com/iptv-org/iptv>) | 全球公开 IPTV 频道集合 | 140,342 | 2026-10-05 |
+| [Kazumi](<https://github.com/Predidit/Kazumi>) | 免费无广告的番剧采集与在线观看 | 30,909 | 2026-10-04 |
+| [iptv-api](<https://github.com/Guovin/iptv-api>) | IPTV 直播源自动采集筛选更新平台 | 25,408 | 2026-09-28 |
+| [Animeko](<https://github.com/open-ani/animeko>) | 一站式弹幕追番平台 | 20,469 | 2026-10-05 |
+| [pansou](<https://github.com/fish2018/pansou>) | 高性能网盘资源搜索 API 服务 | 14,790 | 2026-09-27 |
+| [FongMi TV](<https://github.com/FongMi/TV>) | 基于 CatVod 的开源 Android 影音应用 | 9,678 | 2026-09-28 |
+| [CloudSaver](<https://github.com/jiangrui1994/CloudSaver>) | 网盘资源搜索与转存工具 | 9,352 | 2026-04-20 |
+| [zyfun](<https://github.com/Hiram-Wong/zyfun>) | 跨平台桌面端视频资源播放器 | 8,971 | 2026-06-25 |
+| [Bangumi](<https://github.com/czy0729/Bangumi>) | 专门做 ACG 的类豆瓣追番客户端 | 6,019 | 2026-10-02 |
+| [MoonTVPlus](<https://github.com/mtvpls/MoonTVPlus>) | MoonTV 增强版影视聚合播放器 | 3,353 | 2026-09-28 |
+| [quark-auto-save](<https://github.com/Cp0204/quark-auto-save>) | 夸克网盘自动签到转存整理工具 | 3,056 | 2026-07-09 |
+| [SeleneTV](<https://github.com/MoonTechLab/Selene>) | MoonTV v100/Helios 后端客户端 | 2,559 | 2026-05-25 |
+| [WebHomeTV](<https://github.com/fish2018/webhtv>) | 基于 FongMi/CatVod 二开的 Android 影音应用 | 1,632 | 2026-10-04 |
+| [WebHomeTV2](<https://github.com/Silent1566/webhtv>) | 基于 WebHomeTV 二开，支持 TMDB 海报 | 658 | 2026-10-05 |
+| [sky-tv](<https://github.com/sky22333/sky-tv>) | 现代化跨平台视频播放器空壳应用 | 118 | 2026-10-03 |
 
 <p align="right"><a href="#精选资源">返回分类导航</a></p>
 <!-- featured-resources:end -->
